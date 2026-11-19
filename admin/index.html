@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOROLOGE Admin — Управління каталогом</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .admin-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .admin-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .admin-title {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 600;
+    }
+    .admin-actions { display: flex; gap: 12px; }
+    .admin-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding: 16px;
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+    }
+    .admin-toolbar__search {
+      flex: 1 1 280px;
+      min-width: 200px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      font-size: 14px;
+    }
+    .admin-toolbar__search:focus { border-color: var(--gold); }
+    .admin-table-wrapper { overflow-x: auto; }
+    .admin-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .admin-table th,
+    .admin-table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .admin-table th {
+      background: var(--bg-soft);
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary);
+      white-space: nowrap;
+    }
+    .admin-table tr:last-child td { border-bottom: none; }
+    .admin-table tr:hover td { background: var(--bg-card-hover); }
+    .admin-table__image {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+    }
+    .admin-table__name { font-weight: 500; }
+    .admin-table__brand { color: var(--gold-dark); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .admin-table__gender { text-transform: capitalize; }
+    .admin-table__category { text-transform: capitalize; }
+    .admin-table__price { font-family: var(--font-serif); font-weight: 600; color: var(--gold); }
+    .admin-table__stock {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 10px; border-radius: 999px; font-size: 11px; font-weight: 600;
+    }
+    .admin-table__stock--in { background: rgba(143,191,138,0.15); color: var(--success); }
+    .admin-table__stock--low { background: rgba(201,168,106,0.15); color: var(--gold); }
+    .admin-table__stock--pre { background: var(--tag-bg); color: var(--text-muted); }
+    .admin-table__featured {
+      width: 20px; height: 20px;
+      border: 2px solid var(--border);
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: all var(--transition);
+    }
+    .admin-table__featured.is-featured {
+      background: var(--gold); border-color: var(--gold);
+    }
+    .admin-table__featured.is-featured::after {
+      content: '✓'; color: var(--text-on-gold); font-size: 12px; font-weight: 700;
+    }
+    .admin-table__actions { display: flex; gap: 8px; }
+    .admin-btn {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text-secondary);
+      display: flex; align-items: center; justify-content: center;
+      transition: all var(--transition);
+    }
+    .admin-btn:hover { border-color: var(--gold); color: var(--gold-dark); background: var(--gold-soft); }
+    .admin-btn--delete:hover { border-color: var(--danger); color: var(--danger); background: rgba(217,112,106,0.1); }
+    .admin-pagination {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-top: 24px; padding: 16px;
+      background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius);
+    }
+    .admin-pagination__info { color: var(--text-secondary); font-size: 14px; }
+    .admin-pagination__controls { display: flex; gap: 8px; }
+    .modal {
+      position: fixed; inset: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: center;
+      padding: 24px; background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(6px); animation: modal-in 0.3s ease;
+    }
+    .modal.hidden { display: none; }
+    @keyframes modal-in { from { opacity: 0; transform: translateY(16px) scale(0.98); } to { opacity: 1; transform: none; } }
+    .modal__box {
+      position: relative; width: min(900px, 100%); max-height: 90vh;
+      overflow-y: auto; background: var(--bg-card);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);
+    }
+    .modal__close {
+      position: absolute; top: 16px; right: 16px; z-index: 2;
+      width: 40px; height: 40px; border-radius: 50%;
+      border: 1px solid var(--border); background: var(--bg);
+      font-size: 20px; display: flex; align-items: center; justify-content: center;
+      transition: border-color var(--transition), color var(--transition);
+    }
+    .modal__close:hover { border-color: var(--gold); color: var(--gold); }
+    .modal__body { padding: 32px; }
+    .modal__title { font-family: var(--font-serif); font-size: 24px; font-weight: 600; margin-bottom: 24px; }
+    .form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .form-grid__field { display: flex; flex-direction: column; gap: 6px; }
+    .form-grid__field--wide { grid-column: 1 / -1; }
+    .form-grid__field label { font-size: 12px; color: var(--text-muted); letter-spacing: 0.04em; }
+    .form-grid__field input, .form-grid__field select, .form-grid__field textarea {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 12px 14px; font-size: 14px;
+      transition: border-color var(--transition);
+    }
+    .form-grid__field input:focus, .form-grid__field select:focus, .form-grid__field textarea:focus {
+      border-color: var(--gold); outline: none;
+    }
+    .form-grid__field textarea { min-height: 100px; resize: vertical; font-family: inherit; }
+    .form-grid__field--json textarea { font-family: monospace; font-size: 12px; }
+    .modal__footer { display: flex; justify-content: flex-end; gap: 12px; padding-top: 24px; margin-top: 24px; border-top: 1px solid var(--border); }
+    .toast {
+      position: fixed; bottom: 24px; right: 24px; z-index: 300;
+      padding: 14px 20px; border-radius: var(--radius);
+      background: var(--card); border: 1px solid var(--card-border);
+      box-shadow: var(--shadow-lg); display: flex; align-items: center; gap: 12px;
+      transform: translateY(100px); opacity: 0; transition: all 0.3s ease;
+    }
+    .toast.show { transform: translateY(0); opacity: 1; }
+    .toast--success { border-color: var(--success); }
+    .toast--error { border-color: var(--danger); }
+    .toast__icon { font-size: 18px; }
+    .toast--success .toast__icon { color: var(--success); }
+    .toast--error .toast__icon { color: var(--danger); }
+    @media (max-width: 900px) {
+      .form-grid { grid-template-columns: 1fr; }
+      .admin-toolbar { flex-direction: column; }
+      .admin-toolbar__search { flex: 1 1 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="admin-container">
+    <header class="admin-header">
+      <h1 class="admin-title">HOROLOGE Admin</h1>
+      <div class="admin-actions">
+        <button class="btn btn--gold" id="btn-add">+ Додати товар</button>
+        <button class="btn btn--outline" id="btn-export">Експорт CSV</button>
+        <button class="btn btn--outline" id="btn-import">Імпорт CSV</button>
+        <button class="btn btn--outline" id="btn-build">Згенерувати products.js</button>
+        <a class="btn btn--ghost" href="../index.html" target="_blank">Переглянути сайт</a>
+      </div>
+    </header>
+
+    <div class="admin-toolbar">
+      <input type="search" class="admin-toolbar__search" id="search" placeholder="Пошук за назвою, брендом, ID...">
+      <select id="filter-gender" style="padding: 10px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg);">
+        <option value="">Усі статі</option>
+        <option value="men">Чоловічі</option>
+        <option value="women">Жіночі</option>
+      </select>
+      <select id="filter-category" style="padding: 10px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg);">
+        <option value="">Усі категорії</option>
+        <option value="auto">Автоматичні</option>
+        <option value="quartz">Кварцеві</option>
+        <option value="chrono">Хронографи</option>
+        <option value="luxury">Люкс</option>
+      </select>
+      <select id="filter-stock" style="padding: 10px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg);">
+        <option value="">Усі статуси</option>
+        <option value="in">В наявності</option>
+        <option value="low">Закінчується</option>
+        <option value="pre">Під замовлення</option>
+      </select>
+      <button class="btn btn--ghost" id="btn-reset-filters">Скинути</button>
+    </div>
+
+    <div class="admin-table-wrapper">
+      <table class="admin-table" id="products-table">
+        <thead>
+          <tr>
+            <th style="width: 60px;">ID</th>
+            <th style="width: 60px;">Фото</th>
+            <th>Назва</th>
+            <th>Бренд</th>
+            <th style="width: 100px;">Стать</th>
+            <th style="width: 120px;">Категорія</th>
+            <th style="width: 100px;">Ціна</th>
+            <th style="width: 130px;">Наявність</th>
+            <th style="width: 80px;">Featured</th>
+            <th style="width: 100px;">Дії</th>
+          </tr>
+        </thead>
+        <tbody id="products-tbody"></tbody>
+      </table>
+    </div>
+
+    <div class="admin-pagination">
+      <div class="admin-pagination__info" id="pagination-info">Показано 0 з 0</div>
+      <div class="admin-pagination__controls">
+        <button class="btn btn--outline btn--small" id="btn-prev" disabled>←</button>
+        <span id="page-indicator" style="display:flex;align-items:center;gap:8px;margin:0 16px;">Сторінка <span id="current-page">1</span> з <span id="total-pages">1</span></span>
+        <button class="btn btn--outline btn--small" id="btn-next" disabled>→</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Add/Edit -->
+  <div class="modal hidden" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal__box">
+      <button class="modal__close" id="modal-close" aria-label="Закрити">&times;</button>
+      <div class="modal__body">
+        <h2 class="modal__title" id="modal-title">Додати товар</h2>
+        <form id="product-form" class="form-grid">
+          <input type="hidden" name="id" id="field-id">
+
+          <div class="form-grid__field">
+            <label for="field-name">Назва *</label>
+            <input type="text" name="name" id="field-name" required placeholder="Heritage 42">
+          </div>
+          <div class="form-grid__field">
+            <label for="field-brand">Бренд *</label>
+            <input type="text" name="brand" id="field-brand" required placeholder="Meridian">
+          </div>
+          <div class="form-grid__field">
+            <label for="field-gender">Стать *</label>
+            <select name="gender" id="field-gender" required>
+              <option value="men">Чоловічі</option>
+              <option value="women">Жіночі</option>
+            </select>
+          </div>
+          <div class="form-grid__field">
+            <label for="field-category">Категорія *</label>
+            <select name="category" id="field-category" required>
+              <option value="auto">Автоматичні</option>
+              <option value="quartz">Кварцеві</option>
+              <option value="chrono">Хронографи</option>
+              <option value="luxury">Люкс</option>
+            </select>
+          </div>
+          <div class="form-grid__field">
+            <label for="field-stock">Наявність *</label>
+            <select name="stock" id="field-stock" required>
+              <option value="in">В наявності</option>
+              <option value="low">Закінчується</option>
+              <option value="pre">Під замовлення</option>
+            </select>
+          </div>
+          <div class="form-grid__field">
+            <label for="field-price">Ціна (₴) *</label>
+            <input type="number" name="price" id="field-price" required min="0" step="100" placeholder="84500">
+          </div>
+          <div class="form-grid__field">
+            <label for="field-image">Головне фото (URL) *</label>
+            <input type="url" name="image" id="field-image" required placeholder="https://images.unsplash.com/...">
+          </div>
+          <div class="form-grid__field form-grid__field--wide">
+            <label for="field-description">Опис</label>
+            <textarea name="description" id="field-description" placeholder="Опис товару..."></textarea>
+          </div>
+          <div class="form-grid__field form-grid__field--wide form-grid__field--json">
+            <label for="field-images">Додаткові фото (JSON масив)</label>
+            <textarea name="images" id="field-images" placeholder='["url1","url2"]'></textarea>
+          </div>
+          <div class="form-grid__field form-grid__field--wide form-grid__field--json">
+            <label for="field-specs">Специфікації (JSON об'єкт)</label>
+            <textarea name="specs" id="field-specs" placeholder='{"Механізм":"Автоматичний","Корпус":"Сталь"}'>
+</textarea>
+          </div>
+          <div class="form-grid__field form-grid__field--wide form-grid__field--json">
+            <label for="field-variants">Варіанти (JSON масив)</label>
+            <textarea name="variants" id="field-variants" placeholder='[{"id":1,"color":"Silver","colorCode":"#C0C0C0","price":84500,"images":["url"]}]'>
+</textarea>
+          </div>
+          <div class="form-grid__field">
+            <label for="field-featured">Featured</label>
+            <select name="featured" id="field-featured" style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px 14px;">
+              <option value="false">Ні</option>
+              <option value="true">Так</option>
+            </select>
+          </div>
+          <div class="form-grid__field">
+            <label for="field-groupId">Group ID (для варіантів)</label>
+            <input type="text" name="groupId" id="field-groupId" placeholder="heritage-42">
+          </div>
+
+          <div class="modal__footer">
+            <button type="button" class="btn btn--outline" id="btn-cancel">Скасувати</button>
+            <button type="submit" class="btn btn--gold" id="btn-save">Зберегти</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  <!-- Toast notifications -->
+  <div class="toast" id="toast" role="alert" aria-live="polite">
+    <span class="toast__icon">✓</span>
+    <span class="toast__message"></span>
+  </div>
+
+  <script src="../js/products.js"></script>
+  <script>
+    // Admin state
+    let products = [...PRODUCTS];
+    let currentPage = 1;
+    const pageSize = 20;
+    let editId = null;
+    let filteredProducts = [];
+
+    // DOM elements
+    const tbody = document.getElementById('products-tbody');
+    const searchInput = document.getElementById('search');
+    const filterGender = document.getElementById('filter-gender');
+    const filterCategory = document.getElementById('filter-category');
+    const filterStock = document.getElementById('filter-stock');
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modal-title');
+    const form = document.getElementById('product-form');
+    const toast = document.getElementById('toast');
+    const toastMessage = toast.querySelector('.toast__message');
+    const toastIcon = toast.querySelector('.toast__icon');
+
+    // Format price
+    const fmt = n => n.toLocaleString('uk-UA') + ' ₴';
+
+    // Stock labels
+    const STOCK_LABELS = { in: 'В наявності', low: 'Закінчується', pre: 'Під замовлення' };
+    const GENDER_LABELS = { men: 'Чоловічі', women: 'Жіночі' };
+    const CATEGORY_LABELS = { auto: 'Автоматичні', quartz: 'Кварцеві', chrono: 'Хронографи', luxury: 'Люкс' };
+
+    // Initialize
+    function init() {
+      applyFilters();
+      renderTable();
+      bindEvents();
+    }
+
+    function bindEvents() {
+      // Search & filters
+      searchInput.addEventListener('input', () => { currentPage = 1; applyFilters(); renderTable(); });
+      filterGender.addEventListener('change', () => { currentPage = 1; applyFilters(); renderTable(); });
+      filterCategory.addEventListener('change', () => { currentPage = 1; applyFilters(); renderTable(); });
+      filterStock.addEventListener('change', () => { currentPage = 1; applyFilters(); renderTable(); });
+      document.getElementById('btn-reset-filters').addEventListener('click', resetFilters);
+
+      // Table actions
+      tbody.addEventListener('click', e => {
+        const editBtn = e.target.closest('[data-edit]');
+        const delBtn = e.target.closest('[data-delete]');
+        const featBtn = e.target.closest('[data-featured]');
+        if (editBtn) openModal(editBtn.dataset.edit);
+        if (delBtn) deleteProduct(delBtn.dataset.delete);
+        if (featBtn) toggleFeatured(featBtn.dataset.featured);
+      });
+
+      // Modal
+      document.getElementById('btn-add').addEventListener('click', () => openModal());
+      document.getElementById('modal-close').addEventListener('click', closeModal);
+      document.getElementById('btn-cancel').addEventListener('click', closeModal);
+      modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal(); });
+
+      // Form submit
+      form.addEventListener('submit', saveProduct);
+
+      // Toolbar actions
+      document.getElementById('btn-export').addEventListener('click', exportCSV);
+      document.getElementById('btn-import').addEventListener('click', importCSV);
+      document.getElementById('btn-build').addEventListener('click', buildProducts);
+    }
+
+    function applyFilters() {
+      let list = [...products];
+      const q = searchInput.value.trim().toLowerCase();
+      if (q) list = list.filter(p => p.name.toLowerCase().includes(q) || p.brand.toLowerCase().includes(q) || String(p.id).includes(q));
+      if (filterGender.value) list = list.filter(p => p.gender === filterGender.value);
+      if (filterCategory.value) list = list.filter(p => p.category === filterCategory.value);
+      if (filterStock.value) list = list.filter(p => p.stock === filterStock.value);
+      filteredProducts = list;
+    }
+
+    function resetFilters() {
+      searchInput.value = '';
+      filterGender.value = '';
+      filterCategory.value = '';
+      filterStock.value = '';
+      currentPage = 1;
+      applyFilters();
+      renderTable();
+    }
+
+    function renderTable() {
+      const total = filteredProducts.length;
+      const totalPages = Math.ceil(total / pageSize) || 1;
+      if (currentPage > totalPages) currentPage = totalPages;
+
+      const start = (currentPage - 1) * pageSize;
+      const pageItems = filteredProducts.slice(start, start + pageSize);
+
+      tbody.innerHTML = pageItems.map(p => `
+        <tr>
+          <td>${p.id}</td>
+          <td><img class="admin-table__image" src="${p.image}" alt="" loading="lazy" onerror="this.src='../images/watch.svg'"></td>
+          <td class="admin-table__name">${escapeHtml(p.name)}</td>
+          <td class="admin-table__brand">${escapeHtml(p.brand)}</td>
+          <td class="admin-table__gender">${GENDER_LABELS[p.gender]}</td>
+          <td class="admin-table__category">${CATEGORY_LABELS[p.category]}</td>
+          <td class="admin-table__price">${fmt(p.price)}</td>
+          <td><span class="admin-table__stock admin-table__stock--${p.stock}">${STOCK_LABELS[p.stock]}</span></td>
+          <td>
+            <button class="admin-table__featured ${p.featured ? 'is-featured' : ''}" data-featured="${p.id}" aria-label="${p.featured ? 'Прибрати з featured' : 'Додати в featured'}" title="${p.featured ? 'Прибрати з featured' : 'Додати в featured'}"></button>
+          </td>
+          <td class="admin-table__actions">
+            <button class="admin-btn" data-edit="${p.id}" aria-label="Редагувати" title="Редагувати">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+            </button>
+            <button class="admin-btn admin-btn--delete" data-delete="${p.id}" aria-label="Видалити" title="Видалити">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+            </button>
+          </td>
+        </tr>
+      `).join('');
+
+      // Pagination
+      document.getElementById('current-page').textContent = currentPage;
+      document.getElementById('total-pages').textContent = totalPages;
+      document.getElementById('pagination-info').textContent = `Показано ${pageItems.length} з ${total}`;
+      document.getElementById('btn-prev').disabled = currentPage === 1;
+      document.getElementById('btn-next').disabled = currentPage === totalPages;
+
+      document.getElementById('btn-prev').onclick = () => { if (currentPage > 1) { currentPage--; renderTable(); } };
+      document.getElementById('btn-next').onclick = () => { if (currentPage < totalPages) { currentPage++; renderTable(); } };
+    }
+
+    function openModal(id = null) {
+      editId = id;
+      const p = id ? products.find(x => x.id === Number(id)) : null;
+      modalTitle.textContent = id ? 'Редагувати товар' : 'Додати товар';
+
+      form.reset();
+      document.getElementById('field-id').value = '';
+      if (p) {
+        document.getElementById('field-id').value = p.id;
+        document.getElementById('field-name').value = p.name;
+        document.getElementById('field-brand').value = p.brand;
+        document.getElementById('field-gender').value = p.gender;
+        document.getElementById('field-category').value = p.category;
+        document.getElementById('field-stock').value = p.stock;
+        document.getElementById('field-price').value = p.price;
+        document.getElementById('field-image').value = p.image;
+        document.getElementById('field-description').value = p.description || '';
+        document.getElementById('field-images').value = JSON.stringify(p.images || [], null, 2);
+        document.getElementById('field-specs').value = JSON.stringify(p.specs || {}, null, 2);
+        document.getElementById('field-variants').value = JSON.stringify(p.variants || [], null, 2);
+        document.getElementById('field-featured').value = p.featured ? 'true' : 'false';
+        document.getElementById('field-groupId').value = p.groupId || '';
+      } else {
+        // Defaults for new product
+        document.getElementById('field-featured').value = 'false';
+        const maxId = Math.max(...products.map(x => x.id), 0);
+        document.getElementById('field-id').value = maxId + 1;
+      }
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      document.getElementById('field-name').focus();
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+      editId = null;
+    }
+
+    async function saveProduct(e) {
+      e.preventDefault();
+      const fd = new FormData(form);
+      const data = Object.fromEntries(fd);
+
+      // Parse JSON fields
+      const parseJson = (val, fallback) => {
+        if (!val.trim()) return fallback;
+        try { return JSON.parse(val); } catch { showToast('Помилка JSON у полях', true); return fallback; }
+      };
+
+      const product = {
+        id: editId ? Number(editId) : Number(data.id) || (Math.max(...products.map(x => x.id), 0) + 1),
+        name: data.name.trim(),
+        brand: data.brand.trim(),
+        gender: data.gender,
+        category: data.category,
+        stock: data.stock,
+        price: Number(data.price),
+        image: data.image.trim(),
+        images: parseJson(data.images, [data.image.trim()]),
+        description: data.description.trim(),
+        specs: parseJson(data.specs, {}),
+        variants: parseJson(data.variants, []),
+        featured: data.featured === 'true',
+        groupId: data.groupId.trim() || data.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+      };
+
+      // Validate
+      if (!product.name || !product.brand || !product.image || isNaN(product.price)) {
+        showToast('Заповніть обов\'язкові поля', true);
+        return;
+      }
+
+      if (editId) {
+        const idx = products.findIndex(x => x.id === editId);
+        if (idx !== -1) products[idx] = product;
+      } else {
+        products.push(product);
+      }
+
+      products.sort((a, b) => a.id - b.id);
+      await saveToFile();
+      applyFilters();
+      renderTable();
+      closeModal();
+      showToast(editId ? 'Товар оновлено' : 'Товар додано');
+    }
+
+    function deleteProduct(id) {
+      const pid = Number(id);
+      const p = products.find(x => x.id === pid);
+      if (!p) return;
+      if (!confirm(`Видалити "${p.name}" (ID: ${pid})?`)) return;
+      products = products.filter(x => x.id !== pid);
+      saveToFile();
+      applyFilters();
+      renderTable();
+      showToast('Товар видалено');
+    }
+
+    function toggleFeatured(id) {
+      const pid = Number(id);
+      const p = products.find(x => x.id === pid);
+      if (!p) return;
+      p.featured = !p.featured;
+      saveToFile();
+      applyFilters();
+      renderTable();
+      showToast(p.featured ? 'Додано в featured' : 'Прибрано з featured');
+    }
+
+    async function saveToFile() {
+      const output = {
+        version: 1,
+        updated: new Date().toISOString(),
+        products
+      };
+      try {
+        // Use fetch to save via a server-side endpoint would be ideal,
+        // but for static site we'll use a workaround: copy to clipboard
+        await navigator.clipboard.writeText(JSON.stringify(output, null, 2));
+        showToast('JSON скопійовано в буфер обміну. Збережіть у data/products.json');
+      } catch {
+        showToast('Не вдалося скопіювати. Збережіть вручну з консолі.', true);
+        console.log('COPY THIS TO data/products.json:');
+        console.log(JSON.stringify(output, null, 2));
+      }
+    }
+
+    function exportCSV() {
+      const headers = ['id','name','brand','gender','category','stock','featured','price','image','images','description','specs','variants','groupId'];
+      const rows = products.map(p => [
+        p.id,
+        escapeCsv(p.name),
+        escapeCsv(p.brand),
+        p.gender,
+        p.category,
+        p.stock,
+        p.featured ? 'true' : 'false',
+        p.price,
+        p.image,
+        escapeCsv(JSON.stringify(p.images)),
+        escapeCsv(p.description || ''),
+        escapeCsv(JSON.stringify(p.specs)),
+        escapeCsv(JSON.stringify(p.variants)),
+        p.groupId
+      ]);
+      const csv = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+      downloadFile('products_export.csv', csv);
+      showToast('CSV експортовано');
+    }
+
+    function importCSV() {
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.accept = '.csv';
+      input.onchange = e => {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = async ev => {
+          try {
+            const csv = ev.target.result;
+            const lines = csv.trim().split('\n');
+            const headers = lines[0].split(',').map(h => h.trim().toLowerCase());
+
+            let added = 0, updated = 0;
+            for (let i = 1; i < lines.length; i++) {
+              const row = parseCSVLine(lines[i]);
+              if (row.length < headers.length) continue;
+              const get = (field) => row[headers.indexOf(field)] || '';
+
+              const product = {
+                id: parseInt(get('id'), 10),
+                name: get('name'),
+                brand: get('brand'),
+                gender: get('gender'),
+                category: get('category'),
+                stock: get('stock'),
+                featured: get('featured') === 'true',
+                price: parseInt(get('price'), 10),
+                image: get('image'),
+                images: safeJsonParse(get('images'), [get('image')]),
+                description: get('description'),
+                specs: safeJsonParse(get('specs'), {}),
+                variants: safeJsonParse(get('variants'), []),
+                groupId: get('groupid') || get('name').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+              };
+
+              const existingIdx = products.findIndex(x => x.id === product.id);
+              if (existingIdx !== -1) { products[existingIdx] = product; updated++; }
+              else { products.push(product); added++; }
+            }
+            products.sort((a, b) => a.id - b.id);
+            await saveToFile();
+            applyFilters();
+            renderTable();
+            showToast(`Імпорт: додано ${added}, оновлено ${updated}`);
+          } catch (err) {
+            showToast('Помилка імпорту: ' + err.message, true);
+          }
+        };
+        reader.readAsText(file);
+      };
+      input.click();
+    }
+
+    function buildProducts() {
+      // Generate products.js content
+      const CATEGORIES = { auto: 'Автоматичні', quartz: 'Кварцові', chrono: 'Хронографи', luxury: 'Люкс' };
+      const GENDERS = { men: 'Чоловічі годинники', women: 'Жіночі годинники' };
+      const STOCK = { in: 'В наявності', low: 'Закінчується', pre: 'Під замовлення' };
+
+      const output = `// Автозгенеровано з data/products.json — НЕ РЕДАГУВАТИ ВРУЧНУ
+// Запустіть: node scripts/build-products.js
+
+const CATEGORIES = ${JSON.stringify(CATEGORIES, null, 2)};
+const GENDERS = ${JSON.stringify(GENDERS, null, 2)};
+const STOCK = ${JSON.stringify(STOCK, null, 2)};
+const PRODUCTS = ${JSON.stringify(products, null, 2)};
+
+if (typeof window !== 'undefined') {
+  window.CATEGORIES = CATEGORIES; window.GENDERS = GENDERS; window.STOCK = STOCK; window.PRODUCTS = PRODUCTS;
+}
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { CATEGORIES, GENDERS, STOCK, PRODUCTS };
+}`;
+
+      downloadFile('products.js', output);
+      showToast('products.js згенеровано та завантажено');
+    }
+
+    // Helpers
+    function escapeHtml(str) {
+      return String(str).replace(/[&<>"']/g, c => ({'&':'&','<':'<','>':'>','"':'"',"'":'''}[c]));
+    }
+    function escapeCsv(str) {
+      const s = String(str);
+      if (s.includes(',') || s.includes('"') || s.includes('\n')) {
+        return '"' + s.replace(/"/g, '""') + '"';
+      }
+      return s;
+    }
+    function parseCSVLine(line) {
+      const result = []; let current = ''; let inQuotes = false;
+      for (let i = 0; i < line.length; i++) {
+        const char = line[i], next = line[i+1];
+        if (char === '"') { if (inQuotes && next === '"') { current += '"'; i++; } else inQuotes = !inQuotes; }
+        else if (char === ',' && !inQuotes) { result.push(current); current = ''; }
+        else current += char;
+      }
+      result.push(current);
+      return result;
+    }
+    function safeJsonParse(str, fallback) {
+      if (!str || !str.trim()) return fallback;
+      try { return JSON.parse(str); } catch { return fallback; }
+    }
+    function downloadFile(filename, content) {
+      const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = filename; a.click();
+      URL.revokeObjectURL(url);
+    }
+    function showToast(msg, isError = false) {
+      toastMessage.textContent = msg;
+      toastIcon.textContent = isError ? '✕' : '✓';
+      toast.className = 'toast show ' + (isError ? 'toast--error' : 'toast--success');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+
+    init();
+  </script>
+</body>
+</html>

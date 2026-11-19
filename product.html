@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOROLOGE — Товар</title>
+  <meta name="description" content="Детальна інформація про товар">
+  <link rel="icon" href="images/watch.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html">HOROLOGE<span class="logo__dot">.</span></a>
+
+      <nav class="nav" id="site-nav">
+        <a class="nav__link" href="men.html">Чоловічі</a>
+        <a class="nav__link" href="women.html">Жіночі</a>
+        <a class="nav__link" href="index.html#advantages">Про бутик</a>
+        <a class="nav__link" href="index.html#contacts">Контакти</a>
+      </nav>
+
+      <button class="nav-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <div class="header__actions">
+        <a class="likes-btn" href="favorites.html" aria-label="Обране" title="Обране">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+          <span id="likes-count" class="likes-btn__count hidden">0</span>
+        </a>
+        <a class="cart-btn" href="cart.html" aria-label="Кошик">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 8h12l-1 12H7L6 8z"/>
+            <path d="M9 8V6a3 3 0 0 1 6 0v2"/>
+          </svg>
+          <span id="cart-count" class="cart-btn__count hidden">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Навігація">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="index.html">Головна</a></li>
+        <li class="breadcrumbs__item"><a id="bc-category" href="#">Каталог</a></li>
+        <li class="breadcrumbs__item"><a id="bc-brand" href="#">Бренд</a></li>
+        <li class="breadcrumbs__item" aria-current="page"><span id="bc-name">Назва товару</span></li>
+      </ol>
+    </nav>
+
+    <!-- Product Detail -->
+    <section class="product-detail" id="product-detail">
+      <div class="product-detail__grid">
+        <!-- Image Gallery -->
+        <div class="product-detail__gallery">
+          <div class="product-gallery">
+            <!-- Main Image -->
+            <div class="product-gallery__main">
+              <div class="product-gallery__main-image" id="main-image-wrapper">
+                <img id="main-image" src="" alt="" loading="eager">
+              </div>
+              <!-- Video placeholder -->
+              <button class="product-gallery__video-btn hidden" id="video-btn" aria-label="Відкрити відео">
+                <svg width="48" height="48" viewBox="0 0 461 461" fill="none" aria-hidden="true">
+                  <path d="M365.257 67.393H95.744C42.866 67.393 0 110.259 0 163.137v134.728c0 52.878 42.866 95.744 95.744 95.744h269.513c52.878 0 95.744-42.866 95.744-95.744V163.137C461.001 110.259 418.135 67.393 365.257 67.393z" fill="#F61C0D"/>
+                  <path d="M300.506 237.056l-126.06 60.123c-3.359 1.602-7.239-.847-7.239-4.568V168.607c0-3.774 3.982-6.22 7.348-4.514l126.06 63.881c4.242 2.106 4.177 7.481-.049 9.253z" fill="white"/>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Thumbnails -->
+            <div class="product-gallery__thumbs" id="thumbs-wrapper" role="list" aria-label="Додаткові фото">
+              <!-- Thumbnails rendered by JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-detail__info">
+          <p class="product-detail__brand" id="product-brand"></p>
+          <h1 class="product-detail__name" id="product-name"></h1>
+
+          <div class="product-detail__meta">
+            <span class="product-detail__model" id="product-model">Модель: —</span>
+            <span class="product-detail__stock" id="product-stock"></span>
+          </div>
+
+          <div class="product-detail__price" id="product-price"></div>
+
+          <div class="product-detail__desc" id="product-desc"></div>
+
+          <!-- Color Variants -->
+          <div class="product-detail__variants" id="variants-section" aria-label="Вибір кольору">
+            <label class="variants__label">Колір:</label>
+            <div class="variants__list" id="variants-list" role="radiogroup" aria-label="Оберіть колір">
+              <!-- Variants rendered by JS -->
+            </div>
+          </div>
+
+          <!-- Quantity Selector -->
+          <div class="product-detail__qty" id="qty-section">
+            <label class="qty__label" for="qty-input">Кількість:</label>
+            <div class="qty__control" id="qty-control">
+              <button type="button" class="qty__btn qty__btn--minus" aria-label="Зменшити">−</button>
+              <input type="number" id="qty-input" class="qty__input" value="1" min="1" max="99" aria-label="Кількість">
+              <button type="button" class="qty__btn qty__btn--plus" aria-label="Збільшити">+</button>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="product-detail__actions">
+            <button type="button" class="btn btn--outline btn--block product-detail__fav" id="fav-btn" aria-label="Додати в обране">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+              <span>В обране</span>
+            </button>
+            <button type="button" class="btn btn--gold btn--block product-detail__cart" id="cart-btn" aria-label="Додати в кошик">
+              У кошик
+            </button>
+          </div>
+
+          <!-- Specs -->
+          <div class="product-detail__specs" id="specs-section">
+            <h3 class="specs__title">Характеристики</h3>
+            <dl class="specs" id="specs-list"></dl>
+          </div>
+
+          <!-- Delivery info -->
+          <div class="product-detail__delivery">
+            <div class="delivery-badges">
+              <div class="delivery-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="17 8 12 3 7 8"/>
+                  <line x1="12" y1="3" x2="12" y2="15"/>
+                </svg>
+                <span>Доставка по Україні</span>
+              </div>
+              <div class="delivery-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                <span>Гарантія 2 роки</span>
+              </div>
+              <div class="delivery-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                  <path d="M16 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3z"/>
+                  <polyline points="17 9 12 14 7 9"/>
+                </svg>
+                <span>Повернення за 14 днів</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related products (optional) -->
+    <section class="product-detail__related" id="related-section" aria-labelledby="related-title">
+      <div class="section-head reveal">
+        <h2 class="section-title" id="related-title">Також можуть сподобатися</h2>
+      </div>
+      <div class="grid" id="related-grid"></div>
+    </section>
+  </main>
+
+  <footer id="contacts" class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <p class="logo">HOROLOGE<span class="logo__dot">.</span></p>
+        <p>Бутик годинників із 2009 року. Тільки оригінал, тільки перевірені механізми.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Контакти</h4>
+        <p>+380 (44) 000-00-00</p>
+        <p>sales@horologe.ua</p>
+        <p>Київ, вул. Хрещатик, 12</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Покупцям</h4>
+        <p><a href="delivery.html">Доставка</a></p>
+        <p><a href="payment.html">Оплата</a></p>
+        <p><a href="warranty.html">Гарантія</a></p>
+        <p><a href="favorites.html">Обране</a></p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Навігація</h4>
+        <p><a href="index.html">Головна</a></p>
+        <p><a href="men.html">Чоловічі годинники</a></p>
+        <p><a href="women.html">Жіночі годинники</a></p>
+        <p><a href="cart.html">Кошик</a></p>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© 2026 HOROLOGE. Демо-каталог — усі товари вигадані.</p>
+    </div>
+  </footer>
+
+  <script src="js/ui.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/fav.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

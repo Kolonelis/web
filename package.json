@@ -1,0 +1,29 @@
+{
+  "name": "horologe",
+  "version": "1.0.0",
+  "description": "HOROLOGE — бутик годинників. Каталог із автоматичним управлінням даними через CSV.",
+  "private": true,
+  "scripts": {
+    "import:casio": "node scripts/import-csv.js data/imports/casio.csv",
+    "import:awanger": "node scripts/import-csv.js data/imports/awanger.csv",
+    "import:skmei": "node scripts/import-csv.js data/imports/skmei.csv",
+    "import:current": "node scripts/import-csv.js data/imports/current.csv",
+    "import:all": "npm run import:casio && npm run import:awanger && npm run import:skmei && npm run import:current",
+    "import:dry": "node scripts/import-csv.js data/imports/casio.csv --dry-run && node scripts/import-csv.js data/imports/awanger.csv --dry-run && node scripts/import-csv.js data/imports/skmei.csv --dry-run && node scripts/import-csv.js data/imports/current.csv --dry-run",
+    "build:products": "node scripts/build-products.js",
+    "build": "npm run build:products",
+    "dev": "npx serve . -l 3000",
+    "start": "npm run dev"
+  },
+  "keywords": [
+    "watch",
+    "catalog",
+    "ecommerce",
+    "horologe"
+  ],
+  "author": "HOROLOGE",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}

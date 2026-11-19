@@ -1,0 +1,1915 @@
+{
+  "version": 1,
+  "updated": "2026-08-20T23:48:44.272Z",
+  "products": [
+    {
+      "id": 1,
+      "name": "Heritage 42",
+      "brand": "Meridian",
+      "gender": "men",
+      "category": "auto",
+      "stock": "in",
+      "featured": true,
+      "price": 84500,
+      "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Класика з характером: строгий циферблат, упізнавані стрілки-мечі та автоматичний механізм із запасом ходу на три доби. Годинник однаково впевнено почувається і в офісі, і в вихідний.",
+      "specs": {
+        "Механізм": "Автоматичний, калібр M-901",
+        "Корпус": "Сталь 316L, Ø 42 мм",
+        "Скло": "Сапфірове",
+        "Водозахист": "10 ATM",
+        "Запас ходу": "72 години"
+      },
+      "variants": [
+        {
+          "id": 1,
+          "color": "Silver",
+          "colorCode": "#C0C0C0",
+          "price": 84500,
+          "images": [
+            "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 2,
+          "color": "Gold",
+          "colorCode": "#D4A843",
+          "price": 89500,
+          "images": [
+            "https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 3,
+          "color": "Black",
+          "colorCode": "#1a1a1a",
+          "price": 87500,
+          "images": [
+            "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "heritage-42"
+    },
+    {
+      "id": 2,
+      "name": "Orbis",
+      "brand": "Aralum",
+      "gender": "men",
+      "category": "auto",
+      "stock": "low",
+      "price": 63200,
+      "image": "https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Мінімалізм у чистому вигляді: відкритий циферблат, крізь який видно баланс і колеса механізму. Тонкий корпус зручно лягає під манжет сорочки.",
+      "specs": {
+        "Механізм": "Автоматичний, калібр A-310 з відкритим балансом",
+        "Корпус": "Сталь, Ø 40 мм, висота 9,5 мм",
+        "Скло": "Сапфірове",
+        "Водозахист": "5 ATM",
+        "Запас ходу": "46 годин"
+      },
+      "variants": [
+        {
+          "id": 4,
+          "color": "Silver",
+          "colorCode": "#C0C0C0",
+          "price": 63200,
+          "images": [
+            "https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 5,
+          "color": "Blue",
+          "colorCode": "#1E3A8A",
+          "price": 65200,
+          "images": [
+            "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "orbis"
+    },
+    {
+      "id": 3,
+      "name": "Raiden",
+      "brand": "Chronofixe",
+      "gender": "men",
+      "category": "chrono",
+      "stock": "in",
+      "price": 91500,
+      "image": "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Хронограф із секундоміром до 1/8 секунди, утоплені лічильники та матова сталь без жодного відблиску. Обраний пілотами-спортсменами — і це помітно.",
+      "specs": {
+        "Механізм": "Кварцовий хронограф, калібр CF-88",
+        "Корпус": "Сталь із матовою обробкою, Ø 44 мм",
+        "Скло": "Сапфірове, AR-покриття",
+        "Водозахист": "10 ATM",
+        "Функції": "Хронограф, дата"
+      },
+      "variants": [
+        {
+          "id": 6,
+          "color": "Steel",
+          "colorCode": "#71797E",
+          "price": 91500,
+          "images": [
+            "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 7,
+          "color": "Black PVD",
+          "colorCode": "#1a1a1a",
+          "price": 95500,
+          "images": [
+            "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "raiden"
+    },
+    {
+      "id": 4,
+      "name": "Polar",
+      "brand": "Nordweld",
+      "gender": "men",
+      "category": "quartz",
+      "stock": "in",
+      "price": 38900,
+      "image": "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Надійний «робочий» кварц для походів і відряджень: яскрава люмінесценція, великий циферблат і корпус, якому не страшні удари.",
+      "specs": {
+        "Механізм": "Кварцовий, калібр N-4",
+        "Корпус": "Сталь, Ø 45 мм",
+        "Скло": "Мінеральне з люмінесцентним покриттям",
+        "Водозахист": "20 ATM",
+        "Особливості": "Світні стрілки та позначки"
+      },
+      "variants": [],
+      "groupId": "polar"
+    },
+    {
+      "id": 5,
+      "name": "Nightfall",
+      "brand": "Meridian",
+      "gender": "men",
+      "category": "luxury",
+      "stock": "pre",
+      "featured": true,
+      "price": 214000,
+      "image": "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Вечірня модель у темному виконанні: чорне тло, золоті маркери та перламутрові індекси. Циферблат переливається від графітового до синього залежно від світла.",
+      "specs": {
+        "Механізм": "Автоматичний, калібр M-990",
+        "Корпус": "Сталь із PVD-покриттям, Ø 41 мм",
+        "Скло": "Сапфірове",
+        "Водозахист": "5 ATM",
+        "Особливості": "Перламутрові індекси, золоте напилення"
+      },
+      "variants": [
+        {
+          "id": 8,
+          "color": "Graphite",
+          "colorCode": "#2D2D2D",
+          "price": 214000,
+          "images": [
+            "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 9,
+          "color": "Gold",
+          "colorCode": "#C9A86A",
+          "price": 229000,
+          "images": [
+            "https://images.unsplash.com/photo-1524198661036-9810b67e246b?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "nightfall"
+    },
+    {
+      "id": 6,
+      "name": "Vanguard",
+      "brand": "Chronofixe",
+      "gender": "men",
+      "category": "luxury",
+      "stock": "in",
+      "price": 415000,
+      "image": "https://images.unsplash.com/photo-1524198661036-9810b67e246b?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1524198661036-9810b67e246b?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Люкс-модель: чистий корпус, скло з індексом, який не відштовхується. Калібр з золотим напиленням — загадка власності.",
+      "specs": {
+        "Механізм": "Автоматичний, калібр M-770",
+        "Корпус": "Сталь, Ø 38 мм, PVD-покриття",
+        "Скло": "Сапфірове, індексне",
+        "Водозахист": "10 ATM",
+        "Запас ходу": "120 годин"
+      },
+      "variants": [],
+      "groupId": "vanguard"
+    },
+    {
+      "id": 7,
+      "name": "Titan",
+      "brand": "Nordweld",
+      "gender": "men",
+      "category": "auto",
+      "stock": "in",
+      "price": 48900,
+      "image": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Клінічна точність: автоматичний хронограф з подвійним шаром люмінесценції. Забезпечена високою якістю, з ручною обробкою.",
+      "specs": {
+        "Механізм": "Автоматичний, калібр T-310",
+        "Корпус": "Сталь, Ø 43 мм",
+        "Скло": "Сапфірове",
+        "Водозахист": "10 ATM",
+        "Функції": "Хронограф, тахіметр"
+      },
+      "variants": [],
+      "groupId": "titan"
+    },
+    {
+      "id": 8,
+      "name": "Apex",
+      "brand": "Chronofixe",
+      "gender": "men",
+      "category": "chrono",
+      "stock": "low",
+      "featured": true,
+      "price": 72800,
+      "image": "https://images.unsplash.com/photo-1451290337906-ac938fc89bce?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1451290337906-ac938fc89bce?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Гоночний хронограф із тахіметром на безелі та подвійним шаром люмінесценції. Модель-бестселер марки — за кермом почуваєшся на пів секунди швидше.",
+      "specs": {
+        "Механізм": "Автоматичний хронограф, калібр CF-320",
+        "Корпус": "Сталь, Ø 43 мм",
+        "Скло": "Сапфірове",
+        "Водозахист": "10 ATM",
+        "Функції": "Хронограф, тахіметр, дата"
+      },
+      "variants": [],
+      "groupId": "apex"
+    },
+    {
+      "id": 9,
+      "name": "Drift",
+      "brand": "Aralum",
+      "gender": "men",
+      "category": "quartz",
+      "stock": "in",
+      "price": 44100,
+      "image": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Польові годинники в пісочній гамі з арабськими цифрами та лаконічним циферблатом. Шкіряний ремінець зістарений під сідло.",
+      "specs": {
+        "Механізм": "Кварцовий, калібр N-7",
+        "Корпус": "Сталь із пісочним покриттям, Ø 40 мм",
+        "Скло": "Мінеральне",
+        "Водозахист": "10 ATM",
+        "Особливості": "Арабські цифри, люмінесценція"
+      },
+      "variants": [],
+      "groupId": "drift"
+    },
+    {
+      "id": 10,
+      "name": "Élanée",
+      "brand": "Vestaline",
+      "gender": "women",
+      "category": "luxury",
+      "stock": "in",
+      "featured": true,
+      "price": 185000,
+      "image": "https://images.unsplash.com/photo-1614443640628-6a2d5a0c3c7b?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1614443640628-6a2d5a0c3c7b?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1614443640628-6a2d5a0c3c7b?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Ультратонкі жіночі годинники з діамантовою доріжкою та білим циферблатом із натурального перламутру. Корпус під 18-каратне золото.",
+      "specs": {
+        "Механізм": "Кварцовий, ультратонкий, калібр V-12",
+        "Корпус": "Сталь із золотим напиленням, Ø 32 мм",
+        "Скло": "Сапфірове",
+        "Водозахист": "3 ATM",
+        "Особливості": "Діамантова доріжка (0,54 ct)"
+      },
+      "variants": [
+        {
+          "id": 10,
+          "color": "White Gold",
+          "colorCode": "#F5F5F0",
+          "price": 185000,
+          "images": [
+            "https://images.unsplash.com/photo-1614443640628-6a2d5a0c3c7b?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 11,
+          "color": "Rose Gold",
+          "colorCode": "#E8B4B8",
+          "price": 192000,
+          "images": [
+            "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 12,
+          "color": "Silver",
+          "colorCode": "#C0C0C0",
+          "price": 178000,
+          "images": [
+            "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "elanee"
+    },
+    {
+      "id": 11,
+      "name": "Solaris",
+      "brand": "Aralum",
+      "gender": "women",
+      "category": "quartz",
+      "stock": "in",
+      "price": 27400,
+      "image": "https://images.unsplash.com/photo-1526045431048-f858369a6d69?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1526045431048-f858369a6d69?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Легкі годинники на сонячній батареї: заряджаються від світла й не потребують заміни батарейки роками. Модель на щодень у стриманій кольоровій гамі.",
+      "specs": {
+        "Механізм": "Кварцовий на сонячній батареї, калібр A-S3",
+        "Корпус": "Сталь, Ø 38 мм",
+        "Скло": "Мінеральне",
+        "Водозахист": "10 ATM",
+        "Особливості": "Заряд від світла, запас ходу 6 міс."
+      },
+      "variants": [],
+      "groupId": "solaris"
+    },
+    {
+      "id": 12,
+      "name": "Rivière",
+      "brand": "Vestaline",
+      "gender": "women",
+      "category": "auto",
+      "stock": "pre",
+      "featured": true,
+      "price": 128500,
+      "image": "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Вечірні автоматичні годинники з двоколірним циферблатом «сонячні промені» та лаконічною безельною доріжкою. Колір корпусу повторює колір штрихів річки в сутінках.",
+      "specs": {
+        "Механізм": "Автоматичний, калібр V-210",
+        "Корпус": "Сталь із двоколірною обробкою, Ø 39 мм",
+        "Скло": "Сапфірове",
+        "Водозахист": "5 ATM",
+        "Особливості": "Циферблат «сонячні промені»"
+      },
+      "variants": [
+        {
+          "id": 13,
+          "color": "Two-Tone",
+          "colorCode": "#B8A08A",
+          "price": 128500,
+          "images": [
+            "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 14,
+          "color": "Gold",
+          "colorCode": "#C9A86A",
+          "price": 138500,
+          "images": [
+            "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 15,
+          "color": "Steel",
+          "colorCode": "#71797E",
+          "price": 122500,
+          "images": [
+            "https://images.unsplash.com/photo-1533139502658-0198f920d8e8?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "riviere"
+    },
+    {
+      "id": 13,
+      "name": "Essence",
+      "brand": "Vestaline",
+      "gender": "women",
+      "category": "luxury",
+      "stock": "pre",
+      "featured": true,
+      "price": 246000,
+      "image": "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Еталонна люкс-модель: корпус без жодного шва, циферблат кольору шампанського та найтонший кварцовий механізм. Годинник, про який кажуть «просто й дорого».",
+      "specs": {
+        "Механізм": "Кварцовий, калібр V-9",
+        "Корпус": "Сталь із золотим напиленням, Ø 30 мм",
+        "Скло": "Сапфірове",
+        "Водозахист": "3 ATM",
+        "Особливості": "Циферблат «шампань», матовий браслет"
+      },
+      "variants": [
+        {
+          "id": 16,
+          "color": "Champagne Gold",
+          "colorCode": "#F7E7CE",
+          "price": 246000,
+          "images": [
+            "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 17,
+          "color": "White Gold",
+          "colorCode": "#F5F5F0",
+          "price": 258000,
+          "images": [
+            "https://images.unsplash.com/photo-1614443640628-6a2d5a0c3c7b?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 18,
+          "color": "Rose Gold",
+          "colorCode": "#E8B4B8",
+          "price": 254000,
+          "images": [
+            "https://images.unsplash.com/photo-1548171915-e79f38b76d45?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "essence"
+    },
+    {
+      "id": 14,
+      "name": "Rosée",
+      "brand": "Aralum",
+      "gender": "women",
+      "category": "quartz",
+      "stock": "low",
+      "price": 31900,
+      "image": "https://images.unsplash.com/photo-1594534475808-b18fc33b045e?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1594534475808-b18fc33b045e?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1594534475808-b18fc33b045e?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Повсякденна модель у рожево-золотій гамі з квітковим візерунком на циферблаті. Акуратний корпус 34 мм і м'який ремінець — із них можна не вилазити.",
+      "specs": {
+        "Механізм": "Кварцовий, калібр A-14",
+        "Корпус": "Сталь із рожевим напиленням, Ø 34 мм",
+        "Скло": "Мінеральне",
+        "Водозахист": "5 ATM",
+        "Особливості": "Квітковий візерунок циферблата"
+      },
+      "variants": [
+        {
+          "id": 19,
+          "color": "Rose Gold",
+          "colorCode": "#E8B4B8",
+          "price": 31900,
+          "images": [
+            "https://images.unsplash.com/photo-1594534475808-b18fc33b045e?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 20,
+          "color": "Silver",
+          "colorCode": "#C0C0C0",
+          "price": 29900,
+          "images": [
+            "https://images.unsplash.com/photo-1539874754764-5a96559165b0?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 21,
+          "color": "Gold",
+          "colorCode": "#C9A86A",
+          "price": 33900,
+          "images": [
+            "https://images.unsplash.com/photo-1526045431048-f858369a6d69?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "rose"
+    },
+    {
+      "id": 15,
+      "name": "Breeze 34",
+      "brand": "Nordweld",
+      "gender": "women",
+      "category": "quartz",
+      "stock": "in",
+      "price": 22300,
+      "image": "https://images.unsplash.com/photo-1539874754764-5a96559165b0?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1539874754764-5a96559165b0?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1539874754764-5a96559165b0?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Легка модель на щодень: тонкий корпус, блакитний циферблат і сталевий браслет-сітка. Годинник не відволікає — він просто частина образу.",
+      "specs": {
+        "Механізм": "Кварцовий, калібр N-13",
+        "Корпус": "Сталь, Ø 34 мм",
+        "Скло": "Мінеральне",
+        "Водозахист": "5 ATM",
+        "Особливості": "Браслет-сітка"
+      },
+      "variants": [
+        {
+          "id": 22,
+          "color": "Blue",
+          "colorCode": "#1E3A8A",
+          "price": 22300,
+          "images": [
+            "https://images.unsplash.com/photo-1539874754764-5a96559165b0?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 23,
+          "color": "Silver",
+          "colorCode": "#C0C0C0",
+          "price": 21300,
+          "images": [
+            "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 24,
+          "color": "Gold",
+          "colorCode": "#C9A86A",
+          "price": 24300,
+          "images": [
+            "https://images.unsplash.com/photo-1526045431048-f858369a6d69?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "breeze-34"
+    },
+    {
+      "id": 16,
+      "name": "Aria",
+      "brand": "Meridian",
+      "gender": "women",
+      "category": "auto",
+      "stock": "in",
+      "price": 96700,
+      "image": "https://images.unsplash.com/photo-1533139502658-0198f920d8e8?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1533139502658-0198f920d8e8?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1533139502658-0198f920d8e8?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Жіночі автоматичні годинники: маленький корпус, але справжній механізм із видимим через віконце балансом. Рожеве золото та білий перламутровий циферблат.",
+      "specs": {
+        "Механізм": "Автоматичний, калібр M-210",
+        "Корпус": "Сталь із рожевим напиленням, Ø 36 мм",
+        "Скло": "Сапфірове",
+        "Водозахист": "5 ATM",
+        "Особливості": "Відкритий баланс"
+      },
+      "variants": [
+        {
+          "id": 25,
+          "color": "Rose Gold",
+          "colorCode": "#E8B4B8",
+          "price": 96700,
+          "images": [
+            "https://images.unsplash.com/photo-1533139502658-0198f920d8e8?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 26,
+          "color": "Silver",
+          "colorCode": "#C0C0C0",
+          "price": 92700,
+          "images": [
+            "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 27,
+          "color": "Gold",
+          "colorCode": "#C9A86A",
+          "price": 101700,
+          "images": [
+            "https://images.unsplash.com/photo-1526045431048-f858369a6d69?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "aria"
+    },
+    {
+      "id": 17,
+      "name": "Lumen",
+      "brand": "Chronofixe",
+      "gender": "women",
+      "category": "chrono",
+      "stock": "in",
+      "price": 65900,
+      "image": "https://images.unsplash.com/photo-1548171915-e79f38b76d45?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1548171915-e79f38b76d45?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1548171915-e79f38b76d45?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Хронограф для тих, хто любить точність і стиль: дзеркальний циферблат, делікатні лічильники та перфорований ремінець у гоночній традиції.",
+      "specs": {
+        "Механізм": "Кварцовий хронограф, калібр CF-56",
+        "Корпус": "Сталь, Ø 38 мм",
+        "Скло": "Сапфірове",
+        "Водозахист": "10 ATM",
+        "Функції": "Хронограф, дата"
+      },
+      "variants": [
+        {
+          "id": 28,
+          "color": "Steel",
+          "colorCode": "#71797E",
+          "price": 65900,
+          "images": [
+            "https://images.unsplash.com/photo-1548171915-e79f38b76d45?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 29,
+          "color": "Rose Gold",
+          "colorCode": "#E8B4B8",
+          "price": 71900,
+          "images": [
+            "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 30,
+          "color": "Gold",
+          "colorCode": "#C9A86A",
+          "price": 70900,
+          "images": [
+            "https://images.unsplash.com/photo-1526045431048-f858369a6d69?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "lumen"
+    },
+    {
+      "id": 18,
+      "name": "Misty",
+      "brand": "Aralum",
+      "gender": "women",
+      "category": "luxury",
+      "stock": "in",
+      "price": 295000,
+      "image": "https://images.unsplash.com/photo-1566393683585-7842f3e6c20a?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1566393683585-7842f3e6c20a?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1566393683585-7842f3e6c20a?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Міцний люкс: срібний корпус, перламутрові стілки, автоматичний механізм — справжня майстерня годинникарства з унікальним дизайном.",
+      "specs": {
+        "Механізм": "Автоматичний, калібр V-550",
+        "Корпус": "Срібний, Ø 36 мм, PVD-покриття",
+        "Скло": "Сапфірове",
+        "Водозахист": "10 ATM",
+        "Особливості": "Перламутрові стілки, автоматичний механізм"
+      },
+      "variants": [
+        {
+          "id": 31,
+          "color": "Silver",
+          "colorCode": "#C0C0C0",
+          "price": 295000,
+          "images": [
+            "https://images.unsplash.com/photo-1566393683585-7842f3e6c20a?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 32,
+          "color": "Gold",
+          "colorCode": "#C9A86A",
+          "price": 315000,
+          "images": [
+            "https://images.unsplash.com/photo-1524198661036-9810b67e246b?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 33,
+          "color": "Rose Gold",
+          "colorCode": "#E8B4B8",
+          "price": 310000,
+          "images": [
+            "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "misty"
+    },
+    {
+      "id": 19,
+      "name": "Nova",
+      "brand": "Nordweld",
+      "gender": "men",
+      "category": "quartz",
+      "stock": "in",
+      "price": 31500,
+      "image": "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Простий, але вогнутий кварц для регулярного використання. Великий циферблат, зручний браслет і нейтральний вигляд.",
+      "specs": {
+        "Механізм": "Кварцовий, калібр N-23",
+        "Корпус": "Сталь, Ø 36 мм",
+        "Скло": "Мінеральне",
+        "Водозахист": "5 ATM",
+        "Особливості": "Світлі стрічки, лаконічний дизайн"
+      },
+      "variants": [
+        {
+          "id": 34,
+          "color": "Silver",
+          "colorCode": "#C0C0C0",
+          "price": 31500,
+          "images": [
+            "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 35,
+          "color": "Gold",
+          "colorCode": "#C9A86A",
+          "price": 34500,
+          "images": [
+            "https://images.unsplash.com/photo-1526045431048-f858369a6d69?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 36,
+          "color": "Black",
+          "colorCode": "#1a1a1a",
+          "price": 33500,
+          "images": [
+            "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "nova"
+    },
+    {
+      "id": 20,
+      "name": "Zenith",
+      "brand": "Meridian",
+      "gender": "men",
+      "category": "auto",
+      "stock": "in",
+      "price": 55000,
+      "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Мінімалістичний стиль з чистими лініями. Калібр M-800, сталь 316L. Доступний для хронографних циферблатів.",
+      "specs": {
+        "Механізм": "Автоматичний, калібр M-800",
+        "Корпус": "Сталь 316L, Ø 40 мм",
+        "Скло": "Сапфірове",
+        "Водозахист": "10 ATM",
+        "Запас ходу": "40 годин"
+      },
+      "variants": [
+        {
+          "id": 37,
+          "color": "Silver",
+          "colorCode": "#C0C0C0",
+          "price": 55000,
+          "images": [
+            "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 38,
+          "color": "Gold",
+          "colorCode": "#C9A86A",
+          "price": 59000,
+          "images": [
+            "https://images.unsplash.com/photo-1526045431048-f858369a6d69?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 39,
+          "color": "Black",
+          "colorCode": "#1a1a1a",
+          "price": 57000,
+          "images": [
+            "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "zenith"
+    },
+    {
+      "id": 101,
+      "name": "G-Shock DW-5600",
+      "brand": "Casio",
+      "gender": "men",
+      "category": "quartz",
+      "stock": "in",
+      "featured": false,
+      "price": 4500,
+      "image": "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Легендарний G-Shock з квадратним корпусом. Нескінченна довговічність, водозахист 200м та стримуваний дизайн.",
+      "specs": {
+        "Механізм": "Кварцовий",
+        "Корпус": "Резина/пластик, Ø 42,8 мм",
+        "Скло": "Мінеральне",
+        "Водозахист": "20 ATM",
+        "Функції": "Секундомір, таймер, будильник, світлодіодна підсвітка"
+      },
+      "variants": [
+        {
+          "id": 101,
+          "color": "Black",
+          "colorCode": "#1a1a1a",
+          "price": 4500,
+          "images": [
+            "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 102,
+          "color": "Red",
+          "colorCode": "#C0392B",
+          "price": 4500,
+          "images": [
+            "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 103,
+          "color": "Blue",
+          "colorCode": "#1E3A8A",
+          "price": 4500,
+          "images": [
+            "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "gshock-dw5600"
+    },
+    {
+      "id": 102,
+      "name": "G-Shock GA-2100 CasiOak",
+      "brand": "Casio",
+      "gender": "men",
+      "category": "quartz",
+      "stock": "in",
+      "featured": true,
+      "price": 6200,
+      "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Модна восьмикутна корона, тонкий профіль 11,8 мм та карбоновий корпус. Став іконою стилю.",
+      "specs": {
+        "Механізм": "Кварцовий",
+        "Корпус": "Карбон/резина, Ø 45,4 мм",
+        "Скло": "Мінеральне",
+        "Водозахист": "20 ATM",
+        "Функції": "Секундомір, таймер, 5 будильників, світлодіодна підсвітка"
+      },
+      "variants": [
+        {
+          "id": 104,
+          "color": "Black",
+          "colorCode": "#1a1a1a",
+          "price": 6200,
+          "images": [
+            "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 105,
+          "color": "Green",
+          "colorCode": "#2D5A27",
+          "price": 6200,
+          "images": [
+            "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 106,
+          "color": "Blue",
+          "colorCode": "#1E3A8A",
+          "price": 6200,
+          "images": [
+            "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 107,
+          "color": "Gold",
+          "colorCode": "#C9A86A",
+          "price": 6800,
+          "images": [
+            "https://images.unsplash.com/photo-1524198661036-9810b67e246b?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "gshock-ga2100"
+    },
+    {
+      "id": 103,
+      "name": "Edifice EFR-574",
+      "brand": "Casio",
+      "gender": "men",
+      "category": "chrono",
+      "stock": "in",
+      "featured": false,
+      "price": 8900,
+      "image": "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Гоночний хронограф із сталевим браслетом, тахіметром та сонячним живленням.",
+      "specs": {
+        "Механізм": "Кварцовий на сонячній батареї (Tough Solar)",
+        "Корпус": "Сталь, Ø 44 мм",
+        "Скло": "Мінеральне",
+        "Водозахист": "10 ATM",
+        "Функції": "Хронограф, тахіметр, дата, сонячне живлення"
+      },
+      "variants": [
+        {
+          "id": 108,
+          "color": "Silver/Black",
+          "colorCode": "#71797E",
+          "price": 8900,
+          "images": [
+            "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 109,
+          "color": "Gold/Black",
+          "colorCode": "#C9A86A",
+          "price": 9500,
+          "images": [
+            "https://images.unsplash.com/photo-1524198661036-9810b67e246b?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "edifice-efr574"
+    },
+    {
+      "id": 104,
+      "name": "Sheen SHW-1700",
+      "brand": "Casio",
+      "gender": "women",
+      "category": "quartz",
+      "stock": "in",
+      "featured": false,
+      "price": 5200,
+      "image": "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Елегантний жіночий годинник зі срібним корпусом, перламутровим циферблатом і сонячним живленням.",
+      "specs": {
+        "Механізм": "Кварцовий на сонячній батареї",
+        "Корпус": "Сталь, Ø 33,4 мм",
+        "Скло": "Мінеральне",
+        "Водозахист": "10 ATM",
+        "Особливості": "Перламутровий циферблат, сонячне живлення"
+      },
+      "variants": [
+        {
+          "id": 110,
+          "color": "Silver",
+          "colorCode": "#C0C0C0",
+          "price": 5200,
+          "images": [
+            "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 111,
+          "color": "Rose Gold",
+          "colorCode": "#E8B4B8",
+          "price": 5600,
+          "images": [
+            "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "sheen-shw1700"
+    },
+    {
+      "id": 105,
+      "name": "Baby-G BGA-250",
+      "brand": "Casio",
+      "gender": "women",
+      "category": "quartz",
+      "stock": "in",
+      "featured": false,
+      "price": 4800,
+      "image": "https://images.unsplash.com/photo-1594534475808-b18fc33b045e?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1594534475808-b18fc33b045e?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1526045431048-f858369a6d69?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Компактний G-Shock для жінок: ударозберігаючий корпус, світлодіодна підсвітка та яскраві кольори.",
+      "specs": {
+        "Механізм": "Кварцовий",
+        "Корпус": "Резина/пластик, Ø 42,6 мм",
+        "Скло": "Мінеральне",
+        "Водозахист": "10 ATM",
+        "Функції": "Секундомір, таймер, 5 будильників, світлодіодна підсвітка"
+      },
+      "variants": [
+        {
+          "id": 112,
+          "color": "White",
+          "colorCode": "#F5F5F0",
+          "price": 4800,
+          "images": [
+            "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 113,
+          "color": "Pink",
+          "colorCode": "#E8B4B8",
+          "price": 4800,
+          "images": [
+            "https://images.unsplash.com/photo-1594534475808-b18fc33b045e?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 114,
+          "color": "Blue",
+          "colorCode": "#1E3A8A",
+          "price": 4800,
+          "images": [
+            "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "babyg-bga250"
+    },
+    {
+      "id": 201,
+      "name": "Awanger AW-1001",
+      "brand": "Awanger",
+      "gender": "men",
+      "category": "auto",
+      "stock": "in",
+      "featured": true,
+      "price": 12500,
+      "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Класичний автоматичний годинник з відкритим балансом (open heart) на 6 годинці. Елегантний дизайн для щоденного носіння.",
+      "specs": {
+        "Механізм": "Автоматичний, калібр AW-2001",
+        "Корпус": "Сталь 316L, Ø 41 мм",
+        "Скло": "Сапфірове",
+        "Водозахист": "5 ATM",
+        "Запас ходу": "42 години"
+      },
+      "variants": [
+        {
+          "id": 201,
+          "color": "Silver",
+          "colorCode": "#C0C0C0",
+          "price": 12500,
+          "images": [
+            "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 202,
+          "color": "Gold",
+          "colorCode": "#C9A86A",
+          "price": 13200,
+          "images": [
+            "https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 203,
+          "color": "Black",
+          "colorCode": "#1a1a1a",
+          "price": 12900,
+          "images": [
+            "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "awanger-aw1001"
+    },
+    {
+      "id": 202,
+      "name": "Awanger AW-1002 Skeleton",
+      "brand": "Awanger",
+      "gender": "men",
+      "category": "auto",
+      "stock": "in",
+      "featured": false,
+      "price": 15800,
+      "image": "https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Скелетизований циферблат демонструє роботу механізму. Важкий сталевий браслет з розкладинкою-бабочкою.",
+      "specs": {
+        "Механізм": "Автоматичний, калібр AW-2002 (скелет)",
+        "Корпус": "Сталь 316L, Ø 43 мм",
+        "Скло": "Сапфірове (подвійне)",
+        "Водозахист": "5 ATM",
+        "Запас ходу": "40 годин"
+      },
+      "variants": [
+        {
+          "id": 204,
+          "color": "Silver",
+          "colorCode": "#C0C0C0",
+          "price": 15800,
+          "images": [
+            "https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 205,
+          "color": "Rose Gold",
+          "colorCode": "#E8B4B8",
+          "price": 16500,
+          "images": [
+            "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "awanger-aw1002"
+    },
+    {
+      "id": 203,
+      "name": "Awanger AW-1003 Diver",
+      "brand": "Awanger",
+      "gender": "men",
+      "category": "auto",
+      "stock": "in",
+      "featured": false,
+      "price": 18900,
+      "image": "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Професійний дайверський годинник: однонаправільне безеля, гвинтова задня кришка, гелийовий клапан.",
+      "specs": {
+        "Механізм": "Автоматичний, калібр AW-2003",
+        "Корпус": "Сталь 316L, Ø 44 мм",
+        "Скло": "Сапфірове, 4 мм",
+        "Водозахист": "30 ATM",
+        "Запас ходу": "45 годин",
+        "Особливості": "Гелийовий клапан, однонаправільне безеля, люмінесценція Super-LumiNova"
+      },
+      "variants": [
+        {
+          "id": 206,
+          "color": "Black",
+          "colorCode": "#1a1a1a",
+          "price": 18900,
+          "images": [
+            "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 207,
+          "color": "Blue",
+          "colorCode": "#1E3A8A",
+          "price": 18900,
+          "images": [
+            "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 208,
+          "color": "Green",
+          "colorCode": "#2D5A27",
+          "price": 19500,
+          "images": [
+            "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "awanger-aw1003"
+    },
+    {
+      "id": 204,
+      "name": "Awanger AW-2001 Lady",
+      "brand": "Awanger",
+      "gender": "women",
+      "category": "auto",
+      "stock": "in",
+      "featured": false,
+      "price": 11500,
+      "image": "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Жіночий автоматичний годинник з перламутровим циферблатом та діамантовими індексами. Діаметр 34 мм.",
+      "specs": {
+        "Механізм": "Автоматичний, калібр AW-2101",
+        "Корпус": "Сталь 316L, Ø 34 мм",
+        "Скло": "Сапфірове",
+        "Водозахист": "5 ATM",
+        "Запас ходу": "38 годин",
+        "Особливості": "Перламутрові циферблат, діамантові індекси (0,05 ct)"
+      },
+      "variants": [
+        {
+          "id": 209,
+          "color": "Silver/White",
+          "colorCode": "#F5F5F0",
+          "price": 11500,
+          "images": [
+            "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 210,
+          "color": "Gold/Champagne",
+          "colorCode": "#F7E7CE",
+          "price": 12200,
+          "images": [
+            "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 211,
+          "color": "Rose Gold/Pink",
+          "colorCode": "#E8B4B8",
+          "price": 12200,
+          "images": [
+            "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "awanger-aw2001"
+    },
+    {
+      "id": 205,
+      "name": "Awanger AW-2002 Quartz",
+      "brand": "Awanger",
+      "gender": "women",
+      "category": "quartz",
+      "stock": "in",
+      "featured": false,
+      "price": 6800,
+      "image": "https://images.unsplash.com/photo-1539874754764-5a96559165b0?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1539874754764-5a96559165b0?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1526045431048-f858369a6d69?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Ультратонкий кварцевий годинник (висота 6,2 мм) з меш-браслетом. Мінімалістичний дизайн у дусі баухаусу.",
+      "specs": {
+        "Механізм": "Кварцовий, калібр AW-3001",
+        "Корпус": "Сталь, Ø 36 мм, висота 6,2 мм",
+        "Скло": "Сапфірове",
+        "Водозахист": "3 ATM",
+        "Особливості": "Ультратонкий корпус, меш-браслет"
+      },
+      "variants": [
+        {
+          "id": 212,
+          "color": "Silver",
+          "colorCode": "#C0C0C0",
+          "price": 6800,
+          "images": [
+            "https://images.unsplash.com/photo-1539874754764-5a96559165b0?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 213,
+          "color": "Gold",
+          "colorCode": "#C9A86A",
+          "price": 7200,
+          "images": [
+            "https://images.unsplash.com/photo-1526045431048-f858369a6d69?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 214,
+          "color": "Rose Gold",
+          "colorCode": "#E8B4B8",
+          "price": 7200,
+          "images": [
+            "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "awanger-aw2002"
+    },
+    {
+      "id": 301,
+      "name": "Skmei 1246 Digital",
+      "brand": "Skmei",
+      "gender": "men",
+      "category": "quartz",
+      "stock": "in",
+      "featured": false,
+      "price": 1200,
+      "image": "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Цифровий спортивний годинник: секундомір, таймер, два часові пояси, будильник, EL-підсвітка. Гумовий ремінець.",
+      "specs": {
+        "Механізм": "Цифровий кварц",
+        "Корпус": "Пластик/резина, 50 x 44 мм",
+        "Скло": "Мінеральне",
+        "Водозахист": "5 ATM",
+        "Функції": "Секундомір, таймер, 2 часові пояси, 3 будильники, EL-підсвітка, календар"
+      },
+      "variants": [
+        {
+          "id": 301,
+          "color": "Black",
+          "colorCode": "#1a1a1a",
+          "price": 1200,
+          "images": [
+            "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 302,
+          "color": "Blue",
+          "colorCode": "#1E3A8A",
+          "price": 1200,
+          "images": [
+            "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 303,
+          "color": "Orange",
+          "colorCode": "#E67E22",
+          "price": 1200,
+          "images": [
+            "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 304,
+          "color": "Army Green",
+          "colorCode": "#2D5A27",
+          "price": 1200,
+          "images": [
+            "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "skmei-1246"
+    },
+    {
+      "id": 302,
+      "name": "Skmei 1437 Analog-Digital",
+      "brand": "Skmei",
+      "gender": "men",
+      "category": "quartz",
+      "stock": "in",
+      "featured": true,
+      "price": 1500,
+      "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Комбінований дисплей: аналогові стрілки + цифровий екран. Спортивний стиль, сталевий корпус.",
+      "specs": {
+        "Механізм": "Кварцовий (аналогово-цифровий)",
+        "Корпус": "Сталь/резина, Ø 46 мм",
+        "Скло": "Мінеральне",
+        "Водозахист": "5 ATM",
+        "Функції": "Секундомір, таймер, 2 часові пояси, будильник, дата, LED-підсвітка"
+      },
+      "variants": [
+        {
+          "id": 305,
+          "color": "Black/Silver",
+          "colorCode": "#1a1a1a",
+          "price": 1500,
+          "images": [
+            "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 306,
+          "color": "Blue/Silver",
+          "colorCode": "#1E3A8A",
+          "price": 1500,
+          "images": [
+            "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 307,
+          "color": "Gold/Black",
+          "colorCode": "#C9A86A",
+          "price": 1650,
+          "images": [
+            "https://images.unsplash.com/photo-1524198661036-9810b67e246b?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "skmei-1437"
+    },
+    {
+      "id": 303,
+      "name": "Skmei 1819 Outdoor",
+      "brand": "Skmei",
+      "gender": "men",
+      "category": "quartz",
+      "stock": "in",
+      "featured": false,
+      "price": 1800,
+      "image": "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Польовий годинник з компасом, термометром та альтиметром (опціонально). Широкий гумовий ремінець.",
+      "specs": {
+        "Механізм": "Цифровий кварц",
+        "Корпус": "АБС-пластик/резина, 52 x 48 мм",
+        "Скло": "Мінеральне",
+        "Водозахист": "5 ATM",
+        "Функції": "Компас, термометр, секундомір, таймер, будильник, дата, EL-підсвітка"
+      },
+      "variants": [
+        {
+          "id": 308,
+          "color": "Black",
+          "colorCode": "#1a1a1a",
+          "price": 1800,
+          "images": [
+            "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 309,
+          "color": "Camouflage",
+          "colorCode": "#4A5D23",
+          "price": 1900,
+          "images": [
+            "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 310,
+          "color": "Navy",
+          "colorCode": "#1E3A8A",
+          "price": 1800,
+          "images": [
+            "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "skmei-1819"
+    },
+    {
+      "id": 304,
+      "name": "Skmei 1552 Lady",
+      "brand": "Skmei",
+      "gender": "women",
+      "category": "quartz",
+      "stock": "in",
+      "featured": false,
+      "price": 1100,
+      "image": "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Жіночий цифровий годинник: компактний корпус 38 мм, пастельні кольори, м'який 실리коновий ремінець.",
+      "specs": {
+        "Механізм": "Цифровий кварц",
+        "Корпус": "Пластик/силікон, 38 x 34 мм",
+        "Скло": "Мінеральне",
+        "Водозахист": "3 ATM",
+        "Функції": "Секундомір, будильник, дата, EL-підсвітка, 12/24h формат"
+      },
+      "variants": [
+        {
+          "id": 311,
+          "color": "Pink",
+          "colorCode": "#E8B4B8",
+          "price": 1100,
+          "images": [
+            "https://images.unsplash.com/photo-1594534475808-b18fc33b045e?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 312,
+          "color": "White",
+          "colorCode": "#F5F5F0",
+          "price": 1100,
+          "images": [
+            "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 313,
+          "color": "Lavender",
+          "colorCode": "#B8A0E8",
+          "price": 1100,
+          "images": [
+            "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 314,
+          "color": "Mint",
+          "colorCode": "#A8E8B4",
+          "price": 1100,
+          "images": [
+            "https://images.unsplash.com/photo-1526045431048-f858369a6d69?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "skmei-1552"
+    },
+    {
+      "id": 305,
+      "name": "Skmei 1668 Smart-Look",
+      "brand": "Skmei",
+      "gender": "women",
+      "category": "quartz",
+      "stock": "in",
+      "featured": false,
+      "price": 1350,
+      "image": "https://images.unsplash.com/photo-1539874754764-5a96559165b0?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1539874754764-5a96559165b0?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Стильний гібрид: вигляд смарт-годинника, але класичний кварц. Квадратний корпус, меш-браслет.",
+      "specs": {
+        "Механізм": "Кварцовий",
+        "Корпус": "Змазь/сталь, 40 x 36 мм",
+        "Скло": "Мінеральне",
+        "Водозахист": "3 ATM",
+        "Особливості": "Квадратний корпус, меш-браслет, мінімалістичний циферблат"
+      },
+      "variants": [
+        {
+          "id": 315,
+          "color": "Rose Gold",
+          "colorCode": "#E8B4B8",
+          "price": 1350,
+          "images": [
+            "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 316,
+          "color": "Silver",
+          "colorCode": "#C0C0C0",
+          "price": 1350,
+          "images": [
+            "https://images.unsplash.com/photo-1539874754764-5a96559165b0?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 317,
+          "color": "Gold",
+          "colorCode": "#C9A86A",
+          "price": 1450,
+          "images": [
+            "https://images.unsplash.com/photo-1526045431048-f858369a6d69?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "skmei-1668"
+    },
+    {
+      "id": 401,
+      "name": "Current Classic Auto",
+      "brand": "Current",
+      "gender": "men",
+      "category": "auto",
+      "stock": "in",
+      "featured": true,
+      "price": 9800,
+      "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Чистий автоматичний годинник з сучасним дизайном. Тонкий корпус 10,5 мм, сапфірове скло, переглядовий вікно.",
+      "specs": {
+        "Механізм": "Автоматичний, калібр MIYOTA 8215",
+        "Корпус": "Сталь 316L, Ø 40 мм, висота 10,5 мм",
+        "Скло": "Сапфірове, AR-покриття",
+        "Водозахист": "5 ATM",
+        "Запас ходу": "42 години"
+      },
+      "variants": [
+        {
+          "id": 401,
+          "color": "Silver",
+          "colorCode": "#C0C0C0",
+          "price": 9800,
+          "images": [
+            "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 402,
+          "color": "Black",
+          "colorCode": "#1a1a1a",
+          "price": 10200,
+          "images": [
+            "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 403,
+          "color": "Blue Sunburst",
+          "colorCode": "#1E3A8A",
+          "price": 9800,
+          "images": [
+            "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "current-classic-auto"
+    },
+    {
+      "id": 402,
+      "name": "Current Dress Quartz",
+      "brand": "Current",
+      "gender": "men",
+      "category": "quartz",
+      "stock": "in",
+      "featured": false,
+      "price": 5600,
+      "image": "https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Ультратонкий доглядний годинник (6,8 мм) для костюма. Мінімалістичний циферблат без цифр, шкіряний ремінець.",
+      "specs": {
+        "Механізм": "Кварцовий, калібр ETA 956.112",
+        "Корпус": "Сталь, Ø 38 мм, висота 6,8 мм",
+        "Скло": "Сапфірове",
+        "Водозахист": "3 ATM",
+        "Особливості": "Ультратонкий, дата на 3 годинці"
+      },
+      "variants": [
+        {
+          "id": 404,
+          "color": "Silver/White",
+          "colorCode": "#F5F5F0",
+          "price": 5600,
+          "images": [
+            "https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 405,
+          "color": "Gold/Champagne",
+          "colorCode": "#F7E7CE",
+          "price": 6100,
+          "images": [
+            "https://images.unsplash.com/photo-1524198661036-9810b67e246b?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 406,
+          "color": "Rose Gold/Silver",
+          "colorCode": "#E8B4B8",
+          "price": 6100,
+          "images": [
+            "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "current-dress-quartz"
+    },
+    {
+      "id": 403,
+      "name": "Current Field Auto",
+      "brand": "Current",
+      "gender": "men",
+      "category": "auto",
+      "stock": "in",
+      "featured": false,
+      "price": 13500,
+      "image": "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Польовий автоматичний годинник: яскрава люмінесценція, стрижневим безелем, сталевий браслет та NATO-стрічка в комплекті.",
+      "specs": {
+        "Механізм": "Автоматичний, калібр SEIKO NH35A",
+        "Корпус": "Сталь 316L, Ø 39,5 мм",
+        "Скло": "Сапфірове, подвійне AR",
+        "Водозахист": "10 ATM",
+        "Запас ходу": "41 година",
+        "Особливості": "Люмінесценція на стрілках і індексах, стрижневе безеля, NATO-стрічка в комплекті"
+      },
+      "variants": [
+        {
+          "id": 407,
+          "color": "Olive Green",
+          "colorCode": "#4A5D23",
+          "price": 13500,
+          "images": [
+            "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 408,
+          "color": "Navy Blue",
+          "colorCode": "#1E3A8A",
+          "price": 13500,
+          "images": [
+            "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 409,
+          "color": "Sand",
+          "colorCode": "#D4C4A8",
+          "price": 13800,
+          "images": [
+            "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "current-field-auto"
+    },
+    {
+      "id": 404,
+      "name": "Current Lady Auto",
+      "brand": "Current",
+      "gender": "women",
+      "category": "auto",
+      "stock": "in",
+      "featured": false,
+      "price": 11200,
+      "image": "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Жіночий автоматичний годинник 34 мм з перламутровим циферблатом, діамантовими індексами та м'яким шкіряним ремінем.",
+      "specs": {
+        "Механізм": "Автоматичний, калібр MIYOTA 8205",
+        "Корпус": "Сталь 316L, Ø 34 мм",
+        "Скло": "Сапфірове",
+        "Водозахист": "5 ATM",
+        "Запас ходу": "40 годин",
+        "Особливості": "Перламутрові циферблат, 8 діамантів (0,04 ct), швидка дата"
+      },
+      "variants": [
+        {
+          "id": 410,
+          "color": "Silver/White Pearl",
+          "colorCode": "#F5F5F0",
+          "price": 11200,
+          "images": [
+            "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 411,
+          "color": "Rose Gold/Champagne",
+          "colorCode": "#F7E7CE",
+          "price": 11900,
+          "images": [
+            "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 412,
+          "color": "Gold/White Pearl",
+          "colorCode": "#C9A86A",
+          "price": 11900,
+          "images": [
+            "https://images.unsplash.com/photo-1524198661036-9810b67e246b?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "current-lady-auto"
+    },
+    {
+      "id": 405,
+      "name": "Current Lady Quartz Mesh",
+      "brand": "Current",
+      "gender": "women",
+      "category": "quartz",
+      "stock": "in",
+      "featured": true,
+      "price": 6400,
+      "image": "https://images.unsplash.com/photo-1539874754764-5a96559165b0?q=80&w=1200&auto=format&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1539874754764-5a96559165b0?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "description": "Мінімалістичний кварцевий годинник на меш-браслеті. Корпус 32 мм, сонцепромінний циферблат, дата на 6 годинці.",
+      "specs": {
+        "Механізм": "Кварцовий, калібр RONDA 763",
+        "Корпус": "Сталь, Ø 32 мм, висота 7,2 мм",
+        "Скло": "Сапфірове",
+        "Водозахист": "5 ATM",
+        "Особливості": "Меш-браслет, сонцепромінний циферблат, дата"
+      },
+      "variants": [
+        {
+          "id": 413,
+          "color": "Silver",
+          "colorCode": "#C0C0C0",
+          "price": 6400,
+          "images": [
+            "https://images.unsplash.com/photo-1539874754764-5a96559165b0?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 414,
+          "color": "Rose Gold",
+          "colorCode": "#E8B4B8",
+          "price": 6800,
+          "images": [
+            "https://images.unsplash.com/photo-1548169874-53e85f75f1e?q=80&w=1200&auto=format&fit=crop"
+          ]
+        },
+        {
+          "id": 415,
+          "color": "Gold",
+          "colorCode": "#C9A86A",
+          "price": 6800,
+          "images": [
+            "https://images.unsplash.com/photo-1526045431048-f858369a6d69?q=80&w=1200&auto=format&fit=crop"
+          ]
+        }
+      ],
+      "groupId": "current-lady-quartz-mesh"
+    }
+  ]
+}

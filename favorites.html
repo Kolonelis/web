@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Обране — HOROLOGE</title>
+  <meta name="description" content="Ваші обрані моделі годинників у бутику HOROLOGE.">
+  <link rel="icon" href="images/watch.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html">HOROLOGE<span class="logo__dot">.</span></a>
+
+      <nav class="nav" id="site-nav">
+        <a class="nav__link" href="men.html">Чоловічі</a>
+        <a class="nav__link" href="women.html">Жіночі</a>
+        <a class="nav__link" href="index.html#about">Про бутик</a>
+        <a class="nav__link" href="index.html#contacts">Контакти</a>
+      </nav>
+
+      <button class="nav-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <div class="header__actions">
+        <a class="likes-btn" href="favorites.html" aria-label="Обране" title="Обране">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+          <span id="likes-count" class="likes-btn__count hidden">0</span>
+        </a>
+        <a class="cart-btn" href="cart.html" aria-label="Кошик">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 8h12l-1 12H7L6 8z"/>
+            <path d="M9 8V6a3 3 0 0 1 6 0v2"/>
+          </svg>
+          <span id="cart-count" class="cart-btn__count hidden">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="fav" style="min-height:70vh">
+      <div class="section-head reveal">
+        <h2 class="section-title">Обране</h2>
+        <p id="fav-count" class="section-count"></p>
+      </div>
+
+      <div id="fav-empty" class="empty">
+        <p style="margin-bottom:16px">Поки порожньо. Позначайте моделі сердечком — вони з'являться тут.</p>
+        <a class="btn btn--gold" href="men.html">Перейти до каталогу</a>
+      </div>
+
+      <div id="fav-grid" class="grid hidden"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <p class="logo">HOROLOGE<span class="logo__dot">.</span></p>
+        <p>Бутик годинників із 2009 року. Тільки оригінал, тільки перевірені механізми.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Контакти</h4>
+        <p>+380 (44) 000-00-00</p>
+        <p>sales@horologe.ua</p>
+        <p>Київ, вул. Хрещатик, 12</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Покупцям</h4>
+        <p><a href="delivery.html">Доставка</a></p>
+        <p><a href="payment.html">Оплата</a></p>
+        <p><a href="warranty.html">Гарантія</a></p>
+        <p><a href="favorites.html">Обране</a></p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Навігація</h4>
+        <p><a href="index.html">Головна</a></p>
+        <p><a href="men.html">Чоловічі годинники</a></p>
+        <p><a href="women.html">Жіночі годинники</a></p>
+        <p><a href="cart.html">Кошик</a></p>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© 2026 HOROLOGE. Демо-каталог — усі товари вигадані.</p>
+    </div>
+  </footer>
+
+  <script src="js/ui.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/fav.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/catalog.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кошик — HOROLOGE</title>
+  <meta name="description" content="Ваш кошик годинників. Перевірте товари перед оформленням замовлення.">
+  <link rel="icon" href="images/watch.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html">HOROLOGE<span class="logo__dot">.</span></a>
+
+      <nav class="nav" id="site-nav">
+        <a class="nav__link" href="index.html">Головна</a>
+        <a class="nav__link" href="men.html">Чоловічі</a>
+        <a class="nav__link" href="women.html">Жіночі</a>
+        <a class="nav__link" href="delivery.html">Доставка</a>
+        <a class="nav__link" href="payment.html">Оплата</a>
+        <a class="nav__link" href="warranty.html">Гарантія</a>
+      </nav>
+
+      <button class="nav-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <div class="header__actions">
+        <a class="likes-btn" href="favorites.html" aria-label="Обране" title="Обране">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+          <span id="likes-count" class="likes-btn__count hidden">0</span>
+        </a>
+        <a class="cart-btn" href="cart.html" aria-label="Кошик">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 8h12l-1 12H7L6 8z"/>
+            <path d="M9 8V6a3 3 0 0 1 6 0v2"/>
+          </svg>
+          <span id="cart-count" class="cart-btn__count hidden">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <div class="page-header__inner">
+        <h1 class="page-header__title">Кошик</h1>
+        <span class="page-header__sub">У вашому кошику</span>
+      </div>
+    </div>
+
+    <div class="cart-layout">
+      <!-- Список товарів -->
+      <div class="cart-list" id="cart-list">
+        <div id="cart-empty" class="cart-sidebar__empty">
+          Кошик порожній. Позначте товари у каталогі, щоб додати в кошик.
+        </div>
+      </div>
+
+      <!-- Сумка -->
+      <div class="cart-sidebar" id="cart-sidebar">
+        <h2 class="cart-sidebar__title">Зведення</h2>
+        <div id="cart-items">
+          <div class="cart-sidebar__empty">Товари порожні</div>
+        </div>
+        <div class="cart-sidebar__total">
+          <span>Загальна сума</span>
+          <span id="cart-total">0 ₴</span>
+        </div>
+
+        <div id="promo" class="promo">
+          <div class="promo__box">
+            <label class="promo__label" for="promo-input">Промокод</label>
+            <div class="promo__line">
+              <input type="text" id="promo-input" class="promo__input" placeholder="Введіть промокод" aria-label="Промокод">
+              <button id="promo-apply" class="promo__apply">Застосувати</button>
+            </div>
+            <p id="promo-msg" class="promo__msg"></p>
+            <div class="promo__applied" id="promo-applied" style="display:none">
+              <span>Promocode applied</span>
+              <button class="promo__remove" id="promo-remove" aria-label="Видалити промокод">Видалити</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="checkout" class="checkout">
+      <h2 class="section-title" style="margin-bottom: 16px;">Оформлення замовлення</h2>
+      <form id="order-form" class="form" novalidate>
+        <div class="form__field">
+          <label for="name">Ім'я та прізвисько</label>
+          <input type="text" id="name" name="name" required placeholder="Введіть ім'я" aria-required="true">
+          <span class="form__error" data-err="name"></span>
+        </div>
+
+        <div class="form__field">
+          <label for="phone">Телефон</label>
+          <input type="tel" id="phone" name="phone" required placeholder="+380 (___) ___-__-__" aria-required="true">
+          <span class="form__error" data-err="phone"></span>
+        </div>
+
+        <div class="form__field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com">
+          <span class="form__error" data-err="email"></span>
+        </div>
+
+        <div class="form__field form__field--wide">
+          <label for="comment">Коментар (опціонально)</label>
+          <textarea id="comment" name="comment" rows="3" placeholder="Якщо є що сказати..."></textarea>
+        </div>
+
+        <div class="form__submit-wrap">
+          <button type="submit" class="btn btn--gold btn--block">Оформити замовлення</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="order-success" class="success hidden">
+      <span style="font-size: 28px;">✓</span>
+      <p class="success__title">Замовлення оформлено!</p>
+      <p id="order-number">Замовлення H-XXXXXXXXX</p>
+      <p class="success__msg">Ми зв'яжемося з вами для підтвердження. Ваше замовлення передбачає доставку за 3–7 днів.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <p class="logo">HOROLOGE<span class="logo__dot">.</span></p>
+        <p>Бутик годинників із 2009 року. Тільки оригінал, тільки перевірені механізми.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Контакти</h4>
+        <p>+380 (44) 000-00-00</p>
+        <p>sales@horologe.ua</p>
+        <p>Київ, вул. Хрещатик, 12</p>
+      </div>
+      <div class="footer__col">
+        <h4>Покупцям</h4>
+        <p><a href="delivery.html">Доставка</a></p>
+        <p><a href="payment.html">Оплата</a></p>
+        <p><a href="warranty.html">Гарантія</a></p>
+        <p><a href="favorites.html">Обране</a></p>
+      </div>
+      <div class="footer__col">
+        <h4>Навігація</h4>
+        <p><a href="index.html">Головна</a></p>
+        <p><a href="men.html">Чоловічі</a></p>
+        <p><a href="women.html">Жіночі</a></p>
+        <p><a href="cart.html">Кошик</a></p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 HOROLOGE. Демо-каталог — усі товари вигадані.</p>
+    </div>
+  </footer>
+
+  <script src="js/ui.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/fav.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/catalog.js"></script>
+</body>
+</html>
